@@ -10,7 +10,7 @@ DEFAULT_SEARCH_PATHS: Tuple[str, ...] = ("plugins",)
 
 @dataclass
 class FilePluginMeta:
-    file_path: Union[str, Path]
+    file_path: Path
 
     def __post_init__(self):
         self.file_path = Path(self.file_path).resolve()
@@ -67,7 +67,7 @@ class FileSystemFinder(PluginFinder):
             for root, _, files in os.walk(sp):
                 for file in files:
                     file_path = os.path.join(root, file)
-                    meta = FilePluginMeta(file_path)
+                    meta = FilePluginMeta(file_path)   # type: ignore
                     if self.find_names is not None:
                         if meta.name in self.find_names:
                             found_meta.append(meta)
