@@ -1,5 +1,6 @@
 from abc import ABC
 from typing import Generator, TypeVar, Type, List
+from typing_extensions import Protocol
 
 T = TypeVar('T')
 
@@ -8,7 +9,7 @@ class PluginMeta:
     pass
 
 
-class PluginFinder(ABC):
+class PluginFinder(Protocol[T]):
     metadata_class: Type[T]
 
     def find(self) -> Generator[T, None, None]:
