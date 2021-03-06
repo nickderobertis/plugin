@@ -14,6 +14,3 @@ class Plugin(ABC):
     @classmethod
     def deregister(cls, plugin: PluginSpec):
         cls.handlers.remove(plugin)
-
-    def execute(self, method_name: str, args: Optional[Tuple[Any, ...]] = None, kwargs: Optional[Dict[str, Any]] = None):
-        ...

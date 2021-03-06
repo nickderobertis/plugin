@@ -12,3 +12,4 @@ def test_chain_plugin():
     assert plug.on_args_and_kwargs(50, 60) == (60, dict(value2=70))
     plug.on_nothing()
     assert plug_impl.should_be_ten == 10
+    MyChainPlugin.deregister(plug_impl)

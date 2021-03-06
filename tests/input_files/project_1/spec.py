@@ -1,6 +1,6 @@
-from typing import Tuple, Dict
+from typing import Tuple, Dict, List
 
-from plugin import PluginSpec, ChainPlugin
+from plugin import PluginSpec, ChainPlugin, AggregatePlugin
 
 
 class MyPluginSpec(PluginSpec):
@@ -39,3 +39,19 @@ class MyChainPlugin(ChainPlugin):
         return self.execute('on_nothing')
 
 
+class MyAggregatePlugin(AggregatePlugin):
+
+    def on_single_arg(self, value: float) -> List[float]:
+        return self.execute('on_single_arg', value)
+
+    def on_two_args(self, value: float, value2: float) -> List[Tuple[float, float]]:
+        return self.execute('on_two_args', value, value2)
+
+    def on_kwargs(self, value: float = 10) -> List[Dict[str, float]]:
+        return self.execute('on_kwargs', value=value)
+
+    def on_args_and_kwargs(self, value: float, value2: float = 10) -> List[Tuple[float, Dict[str, float]]]:
+        return self.execute('on_args_and_kwargs', value, value2=value2)
+
+    def on_nothing(self) -> List:
+        return self.execute('on_nothing')
