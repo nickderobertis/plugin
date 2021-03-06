@@ -1,7 +1,12 @@
+# This section only needed due to project structure
 import sys
-import json
+from pathlib import Path
+project_root = Path(__file__).parent.parent.parent.parent.parent.parent
+sys.path.insert(0, str(project_root.resolve()))
 
-input_data = json.loads(sys.stdin.read())
-args, kwargs = input_data['args'], input_data['kwargs']
+# Start of actual script
+from plugin import load_args_kwargs, output_args_kwargs
+
+args, kwargs = load_args_kwargs()
 val = args[0]
-print(val + 20)
+output_args_kwargs(val + 20)

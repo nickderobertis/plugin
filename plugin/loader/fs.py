@@ -15,7 +15,7 @@ FILE_EXECUTORS: Dict[str, str] = {
 }
 
 
-def run_file(executor: str, path: Path, *args, **kwargs) -> Dict[str, Any]:
+def run_file(executor: str, path: Path, *args, **kwargs):
     arg_spec = dict(args=args, kwargs=kwargs)
     json_str = json.dumps(arg_spec)
     try:
@@ -29,8 +29,24 @@ def run_file(executor: str, path: Path, *args, **kwargs) -> Dict[str, Any]:
     except subprocess.CalledProcessError as e:
         print(e.stderr.decode('utf8'))
         raise e
+    if not result.stdout:
+        return
+
     result_dict = json.loads(result.stdout)
-    return result_dict
+    args, kwargs = result_dict["args"], result_dict["kwargs"]
+    if not args and not kwargs:
+        return
+    elif args and not kwargs:
+        if isinstance(args, list):
+            return tuple(args)
+        return args
+    elif not args and kwargs:
+        return kwargs
+    else:
+        # args and kwargs
+        if isinstance(args, list):
+            return tuple(args), kwargs
+        return args, kwargs
 
 
 class FilePluginLoader(PluginLoader):
