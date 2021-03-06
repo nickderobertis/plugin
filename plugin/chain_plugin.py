@@ -7,28 +7,28 @@ class ChainPlugin(Plugin):
     def execute(
         self,
         method_name: str,
-        args: Optional[Tuple[Any, ...]] = None,
-        kwargs: Optional[Dict[str, Any]] = None,
+        *args,
+        **kwargs
     ):
         for handler in self.handlers:
             method = getattr(handler, method_name)
-            if args is None and kwargs is None:
+            if not args and not kwargs:
                 method()
-            elif args is not None and kwargs is None:
+            elif args and not kwargs:
                 args = method(*args)
-            elif args is None and kwargs is not None:
+            elif not args and kwargs:
                 kwargs = method(**kwargs)
             else:
-                # args is not None and kwags is not None
+                # args and kwargs
                 args, kwargs = method(*args, **kwargs)
 
-        if args is None and kwargs is None:
+        if not args and not kwargs:
             return
-        elif args is not None and kwargs is None:
+        elif args and not kwargs:
             return args
-        elif args is None and kwargs is not None:
+        elif not args and kwargs:
             return kwargs
         else:
-            # args is not None and kwags is not None
+            # args and kwargs
             return args, kwargs
 

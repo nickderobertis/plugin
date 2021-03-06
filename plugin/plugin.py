@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import List, Any, Tuple, Dict, Optional
 
 from plugin.spec import PluginSpec
@@ -14,3 +14,7 @@ class Plugin(ABC):
     @classmethod
     def deregister(cls, plugin: PluginSpec):
         cls.handlers.remove(plugin)
+
+    @abstractmethod
+    def execute(self, method_name: str, *args, **kwargs):
+        ...
