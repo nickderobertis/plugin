@@ -21,6 +21,8 @@ pytest-cov = "*"
 mypy = "*"
 pypandoc = "*"
 cruft = "*"
+astor = "*"
+black = "*"
 
 [requires]
 python_version = "3.8"
