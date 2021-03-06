@@ -5,10 +5,6 @@ from typing_extensions import Protocol
 T = TypeVar('T')
 
 
-class PluginMeta:
-    pass
-
-
 class PluginFinder(Protocol[T]):
     metadata_class: Type[T]
 

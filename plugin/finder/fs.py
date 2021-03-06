@@ -2,12 +2,12 @@ import os
 from pathlib import Path
 from typing import Tuple, Iterable, Generator, Sequence, Optional, List, Union
 
-from plugin.finder.base import PluginFinder, PluginMeta
+from plugin.finder.base import PluginFinder
 
 DEFAULT_SEARCH_PATHS: Tuple[str, ...] = ("plugins",)
 
 
-class FilePluginMeta(PluginMeta):
+class FilePluginMeta:
     def __init__(self, file_path: Union[str, Path]):
         self.file_path = Path(file_path)
 
