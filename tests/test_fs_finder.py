@@ -3,16 +3,8 @@ from typing import Any, List
 from plugin import FileSystemFinder
 from plugin.finder.fs import FilePluginMeta
 from tests import config as conf
+from tests.config import EXPECT_PROJECT_1_PYTHON_METAS
 from tests.input_files.project_1.spec import MyPluginSpec
-
-EXPECT_METAS: List[FilePluginMeta] = [
-    FilePluginMeta(conf.PROJECT_1_FS_PLUG_PATH / "on_nothing.py"),
-    FilePluginMeta(conf.PROJECT_1_FS_PLUG_PATH / "on_args_and_kwargs.py"),
-    FilePluginMeta(conf.PROJECT_1_FS_PLUG_PATH / "on_kwargs.py"),
-    FilePluginMeta(conf.PROJECT_1_FS_PLUG_PATH / "on_single_arg.py"),
-    FilePluginMeta(conf.PROJECT_1_FS_PLUG_PATH / "on_two_args.py"),
-]
-EXPECT_METAS.sort(key=lambda meta: meta.name)
 
 
 def _assert_found(finder: FileSystemFinder, found: Any):
@@ -34,11 +26,11 @@ def test_fs_finder_find_exts():
     finder = FileSystemFinder(
         find_exts=["py"], search_paths=[conf.PROJECT_1_FS_PLUG_PATH]
     )
-    _assert_found(finder, EXPECT_METAS)
+    _assert_found(finder, EXPECT_PROJECT_1_PYTHON_METAS)
 
 
 def test_fs_finder_from_spec():
     finder = FileSystemFinder.from_spec(
         MyPluginSpec, search_paths=[conf.PROJECT_1_FS_PLUG_PATH]
     )
-    _assert_found(finder, EXPECT_METAS)
+    _assert_found(finder, EXPECT_PROJECT_1_PYTHON_METAS)

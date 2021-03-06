@@ -20,6 +20,13 @@ class FilePluginMeta:
         return [suff.replace(".", "").casefold() for suff in self.file_path.suffixes]
 
     @property
+    def extension(self) -> str:
+        exts = self.extensions
+        if len(exts) > 1:
+            raise NotImplementedError(f'more than one extension exists for {self}')
+        return exts[0]
+
+    @property
     def name(self) -> str:
         return self.file_path.stem
 

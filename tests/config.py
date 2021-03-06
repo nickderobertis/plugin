@@ -1,7 +1,20 @@
 from pathlib import Path
+from typing import List, Dict
+
+from plugin.finder.fs import FilePluginMeta
 
 TESTS_PATH = Path(__file__).parent
 INPUT_FILES_PATH = TESTS_PATH / 'input_files'
 PROJECT_1_PATH = INPUT_FILES_PATH / 'project_1'
 PROJECT_1_PLUGINS_PATH = PROJECT_1_PATH / 'plugins'
 PROJECT_1_FS_PLUG_PATH = PROJECT_1_PLUGINS_PATH / 'myfsplug'
+
+EXPECT_PROJECT_1_PYTHON_META_DICT: Dict[str, FilePluginMeta] = {
+    'on_nothing' : FilePluginMeta(PROJECT_1_FS_PLUG_PATH / "on_nothing.py"),
+    'on_args_and_kwargs' : FilePluginMeta(PROJECT_1_FS_PLUG_PATH / "on_args_and_kwargs.py"),
+    'on_kwargs' : FilePluginMeta(PROJECT_1_FS_PLUG_PATH / "on_kwargs.py"),
+    'on_single_arg' : FilePluginMeta(PROJECT_1_FS_PLUG_PATH / "on_single_arg.py"),
+    'on_two_args' : FilePluginMeta(PROJECT_1_FS_PLUG_PATH / "on_two_args.py"),
+}
+EXPECT_PROJECT_1_PYTHON_METAS: List[FilePluginMeta] = [val for val in EXPECT_PROJECT_1_PYTHON_META_DICT.values()]
+EXPECT_PROJECT_1_PYTHON_METAS.sort(key=lambda meta: meta.name)

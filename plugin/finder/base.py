@@ -1,4 +1,3 @@
-from abc import ABC
 from typing import Generator, TypeVar, Type, List
 from typing_extensions import Protocol
 
