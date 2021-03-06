@@ -3,7 +3,7 @@ from typing import Tuple, Dict
 from tests.input_files.project_1.spec import MyPluginSpec
 
 
-class MyChainPluginImplementation(MyPluginSpec):
+class MyPluginImplementation(MyPluginSpec):
     def on_single_arg(self, value: float) -> float:
         return value + 10
 

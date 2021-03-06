@@ -3,9 +3,9 @@ from functools import partial
 from pathlib import Path
 import json
 import sys
-from typing import Any, Dict
+from typing import Dict, Callable
 
-from plugin import ChainPlugin
+from plugin import PluginSpec
 from plugin.finder.fs import FilePluginMeta
 from plugin.loader.base import PluginLoader
 
@@ -53,12 +53,16 @@ class FilePluginLoader(PluginLoader):
     metadata_class = FilePluginMeta
     file_executors: Dict[str, str] = FILE_EXECUTORS
 
-    def load_chain(self, meta: FilePluginMeta) -> ChainPlugin:
+    def _get_run_func(self, meta: FilePluginMeta) -> Callable:
         try:
             executor = self.file_executors[meta.extension]
         except KeyError:
             raise NotImplementedError(f'No implemented executor for extension {meta.extension}')
-        plug = ChainPlugin()
         run_this_file = partial(run_file, executor, meta.file_path)
+        return run_this_file
+
+    def load(self, meta: FilePluginMeta) -> PluginSpec:
+        plug = PluginSpec()
+        run_this_file = self._get_run_func(meta)
         setattr(plug, meta.name, run_this_file)
         return plug
