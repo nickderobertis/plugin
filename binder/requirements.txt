@@ -1,5 +1,5 @@
 typing_extensions
-typer
-black
 astor
+typer
 plugitin
+black
