@@ -17,7 +17,7 @@ class PluginSpecAstExtractor(ast.NodeVisitor):
 
     def visit_ClassDef(self, node: ast.ClassDef) -> Any:
         for base in node.bases:
-            # TODO: make codegen work if PluginSpec is renamed on import
+            # TODO [$60442d0a11b258000ab6c6c7]: make codegen work if PluginSpec is renamed on import
             if base.id == "PluginSpec":  # type: ignore
                 self.class_defs.append(node)
                 break
