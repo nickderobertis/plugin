@@ -1,4 +1,4 @@
-black
 astor
-typing_extensions
 plugin
+typing_extensions
+black
