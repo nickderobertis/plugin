@@ -6,7 +6,7 @@
             "package_name": "plugitin",
             "package_directory": "plugitin",
             "full_name": "Python Plugin System",
-            "repo_name": "plugin",
+            "repo_name": "plugitin",
             "repo_username": "nickderobertis",
             "short_description": "A flexible Python plugin framework supporting plugins in multiple languages",
             "package_author": "Nick DeRobertis",

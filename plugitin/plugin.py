@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Any, Tuple, Dict, Optional, Type
 
-from plugin.spec import PluginSpec
+from plugitin.spec import PluginSpec
 
 class RegisterContext:
 

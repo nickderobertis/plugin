@@ -5,9 +5,9 @@ import json
 import sys
 from typing import Dict, Callable
 
-from plugin import PluginSpec
-from plugin.finder.fs import FilePluginMeta
-from plugin.loader.base import PluginLoader
+from plugitin import PluginSpec
+from plugitin.finder.fs import FilePluginMeta
+from plugitin.loader.base import PluginLoader
 
 FILE_EXECUTORS: Dict[str, str] = {
     'py': sys.executable,

@@ -3,8 +3,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Tuple, Iterable, Generator, Sequence, Optional, List, Union, Type
 
-from plugin.spec import PluginSpec
-from plugin.finder.base import PluginFinder
+from plugitin.spec import PluginSpec
+from plugitin.finder.base import PluginFinder
 
 DEFAULT_SEARCH_PATHS: Tuple[str, ...] = ("plugins",)
 

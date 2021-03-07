@@ -1,7 +1,7 @@
 from typing import Generator, TypeVar, Type, List, Sequence, Iterable
 from typing_extensions import Protocol
 
-from plugin import ChainPlugin, AggregatePlugin, PluginSpec
+from plugitin import ChainPlugin, AggregatePlugin, PluginSpec
 
 T = TypeVar("T")
 

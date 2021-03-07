@@ -1,5 +1,5 @@
 from typing import *
-from plugin import ChainPlugin, AggregatePlugin
+from plugitin import ChainPlugin, AggregatePlugin
 
 
 class MyPluginChain(ChainPlugin):
