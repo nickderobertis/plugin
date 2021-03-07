@@ -1,4 +1,4 @@
-Getting started with plugin
+Getting started with plugitin
 **********************************
 
 Install
@@ -6,7 +6,7 @@ Install
 
 Install via::
 
-    pip install plugin
+    pip install plugitin
 
 Usage
 =========
@@ -15,6 +15,6 @@ Some highlighted functionality.
 
 This is a simple example::
 
-    import plugin
+    import plugitin
 
 

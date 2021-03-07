@@ -1,0 +1,35 @@
+plugitin.finder package
+=======================
+
+.. automodule:: plugitin.finder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+plugitin.finder.base module
+---------------------------
+
+.. automodule:: plugitin.finder.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.finder.fs module
+-------------------------
+
+.. automodule:: plugitin.finder.fs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.finder.name module
+---------------------------
+
+.. automodule:: plugitin.finder.name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

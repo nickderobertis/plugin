@@ -1,0 +1,35 @@
+plugitin.loader package
+=======================
+
+.. automodule:: plugitin.loader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+plugitin.loader.base module
+---------------------------
+
+.. automodule:: plugitin.loader.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.loader.fs module
+-------------------------
+
+.. automodule:: plugitin.loader.fs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.loader.module module
+-----------------------------
+
+.. automodule:: plugitin.loader.module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

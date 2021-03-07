@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>plugin.finder.base &mdash; plugin 0.1.0 documentation</title>
+  <title>plugitin.metas.module &mdash; plugitin 0.1.0 documentation</title>
   
 
   
@@ -57,7 +57,7 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> plugin
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> plugitin
           
 
           
@@ -94,12 +94,12 @@
             
               <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Getting started with plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Getting started with plugitin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html">This is my gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">plugitin</a></li>
 </ul>
 
             
@@ -115,7 +115,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">plugin</a>
+          <a href="../../../index.html">plugitin</a>
         
       </nav>
 
@@ -148,7 +148,7 @@
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
-      <li>plugin.finder.base</li>
+      <li>plugitin.metas.module</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -163,21 +163,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for plugin.finder.base</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">List</span>
-<span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">Protocol</span>
+  <h1>Source code for plugitin.metas.module</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">ModuleType</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
 
-<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">plugitin.metas.base</span> <span class="kn">import</span> <span class="n">PluginMeta</span>
 
 
-<div class="viewcode-block" id="PluginFinder"><a class="viewcode-back" href="../../../api/plugin.finder.html#plugin.finder.base.PluginFinder">[docs]</a><span class="k">class</span> <span class="nc">PluginFinder</span><span class="p">(</span><span class="n">Protocol</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
-    <span class="n">metadata_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">]</span>
+<div class="viewcode-block" id="PythonModuleMeta"><a class="viewcode-back" href="../../../api/plugitin.metas.html#plugitin.metas.module.PythonModuleMeta">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">PythonModuleMeta</span><span class="p">(</span><span class="n">PluginMeta</span><span class="p">):</span>
+    <span class="n">import_path</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">module</span><span class="p">:</span> <span class="n">ModuleType</span>
 
-<div class="viewcode-block" id="PluginFinder.find"><a class="viewcode-back" href="../../../api/plugin.finder.html#plugin.finder.base.PluginFinder.find">[docs]</a>    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
-        <span class="o">...</span></div>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">path_parts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">import_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PluginFinder.find_all"><a class="viewcode-back" href="../../../api/plugin.finder.html#plugin.finder.base.PluginFinder.find_all">[docs]</a>    <span class="k">def</span> <span class="nf">find_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">()]</span></div></div>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">plugin_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
 </pre></div>
 
            </div>

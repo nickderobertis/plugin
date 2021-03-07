@@ -1,0 +1,61 @@
+plugitin package
+================
+
+.. automodule:: plugitin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+   plugitin.codegen
+   plugitin.finder
+   plugitin.loader
+   plugitin.metas
+
+Submodules
+----------
+
+plugitin.aggregate\_plugin module
+---------------------------------
+
+.. automodule:: plugitin.aggregate_plugin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.chain\_plugin module
+-----------------------------
+
+.. automodule:: plugitin.chain_plugin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.plugin module
+----------------------
+
+.. automodule:: plugitin.plugin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.pyfs module
+--------------------
+
+.. automodule:: plugitin.pyfs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.spec module
+--------------------
+
+.. automodule:: plugitin.spec
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

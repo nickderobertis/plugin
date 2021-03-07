@@ -1,7 +1,7 @@
-plugin
-======
+plugitin
+========
 
 .. toctree::
    :maxdepth: 4
 
-   plugin
+   plugitin

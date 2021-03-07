@@ -1,0 +1,35 @@
+plugitin.metas package
+======================
+
+.. automodule:: plugitin.metas
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+plugitin.metas.base module
+--------------------------
+
+.. automodule:: plugitin.metas.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.metas.fs module
+------------------------
+
+.. automodule:: plugitin.metas.fs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.metas.module module
+----------------------------
+
+.. automodule:: plugitin.metas.module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

@@ -1,0 +1,27 @@
+plugitin.codegen package
+========================
+
+.. automodule:: plugitin.codegen
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+plugitin.codegen.cli module
+---------------------------
+
+.. automodule:: plugitin.codegen.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugitin.codegen.logic module
+-----------------------------
+
+.. automodule:: plugitin.codegen.logic
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

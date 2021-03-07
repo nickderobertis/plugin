@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>plugitin package &mdash; plugitin 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-rendered-html.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="plugitin.codegen package" href="plugitin.codegen.html" />
+    <link rel="prev" title="plugitin" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> plugitin
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Getting started with plugitin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">This is my gallery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">plugitin</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">plugitin package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="plugitin.codegen.html">plugitin.codegen package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugitin.finder.html">plugitin.finder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugitin.loader.html">plugitin.loader package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugitin.metas.html">plugitin.metas package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugitin.aggregate_plugin">plugitin.aggregate_plugin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugitin.chain_plugin">plugitin.chain_plugin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugitin.plugin">plugitin.plugin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plugitin-pyfs-module">plugitin.pyfs module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugitin.spec">plugitin.spec module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">plugitin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">plugitin</a> &raquo;</li>
+        
+      <li>plugitin package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/plugitin.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plugitin-package">
+<h1>plugitin package<a class="headerlink" href="#plugitin-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plugitin.codegen.html">plugitin.codegen package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.codegen.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.codegen.html#plugitin-codegen-cli-module">plugitin.codegen.cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.codegen.html#plugitin-codegen-logic-module">plugitin.codegen.logic module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugitin.finder.html">plugitin.finder package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.finder.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.finder.html#module-plugitin.finder.base">plugitin.finder.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.finder.html#plugitin-finder-fs-module">plugitin.finder.fs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.finder.html#plugitin-finder-name-module">plugitin.finder.name module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugitin.loader.html">plugitin.loader package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.loader.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.loader.html#plugitin-loader-base-module">plugitin.loader.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.loader.html#plugitin-loader-fs-module">plugitin.loader.fs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.loader.html#plugitin-loader-module-module">plugitin.loader.module module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugitin.metas.html">plugitin.metas package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.metas.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.metas.html#module-plugitin.metas.base">plugitin.metas.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.metas.html#module-plugitin.metas.fs">plugitin.metas.fs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugitin.metas.html#module-plugitin.metas.module">plugitin.metas.module module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-plugitin.aggregate_plugin">
+<span id="plugitin-aggregate-plugin-module"></span><h2>plugitin.aggregate_plugin module<a class="headerlink" href="#module-plugitin.aggregate_plugin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugitin.aggregate_plugin.AggregatePlugin">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugitin.aggregate_plugin.</span></code><code class="sig-name descname"><span class="pre">AggregatePlugin</span></code><a class="reference internal" href="../_modules/plugitin/aggregate_plugin.html#AggregatePlugin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.aggregate_plugin.AggregatePlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#plugitin.plugin.Plugin" title="plugitin.plugin.Plugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">plugitin.plugin.Plugin</span></code></a></p>
+<dl class="py method">
+<dt id="plugitin.aggregate_plugin.AggregatePlugin.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugitin/aggregate_plugin.html#AggregatePlugin.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.aggregate_plugin.AggregatePlugin.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-plugitin.chain_plugin">
+<span id="plugitin-chain-plugin-module"></span><h2>plugitin.chain_plugin module<a class="headerlink" href="#module-plugitin.chain_plugin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugitin.chain_plugin.ChainPlugin">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugitin.chain_plugin.</span></code><code class="sig-name descname"><span class="pre">ChainPlugin</span></code><a class="reference internal" href="../_modules/plugitin/chain_plugin.html#ChainPlugin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.chain_plugin.ChainPlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#plugitin.plugin.Plugin" title="plugitin.plugin.Plugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">plugitin.plugin.Plugin</span></code></a></p>
+<dl class="py method">
+<dt id="plugitin.chain_plugin.ChainPlugin.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugitin/chain_plugin.html#ChainPlugin.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.chain_plugin.ChainPlugin.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-plugitin.plugin">
+<span id="plugitin-plugin-module"></span><h2>plugitin.plugin module<a class="headerlink" href="#module-plugitin.plugin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugitin.plugin.Plugin">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugitin.plugin.</span></code><code class="sig-name descname"><span class="pre">Plugin</span></code><a class="reference internal" href="../_modules/plugitin/plugin.html#Plugin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.plugin.Plugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<dl class="py method">
+<dt id="plugitin.plugin.Plugin.deregister">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">deregister</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugitin/plugin.html#Plugin.deregister"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.plugin.Plugin.deregister" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="plugitin.plugin.Plugin.execute">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugitin/plugin.html#Plugin.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.plugin.Plugin.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="plugitin.plugin.Plugin.handlers">
+<code class="sig-name descname"><span class="pre">handlers</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#plugitin.spec.PluginSpec" title="plugitin.spec.PluginSpec"><span class="pre">plugitin.spec.PluginSpec</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#plugitin.plugin.Plugin.handlers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="plugitin.plugin.Plugin.register">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">register</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugitin/plugin.html#Plugin.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.plugin.Plugin.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a virtual subclass of an ABC.</p>
+<p>Returns the subclass, to allow usage as a class decorator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#plugitin.plugin.RegisterContext" title="plugitin.plugin.RegisterContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">RegisterContext</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="plugitin.plugin.RegisterContext">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugitin.plugin.</span></code><code class="sig-name descname"><span class="pre">RegisterContext</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugitin/plugin.html#RegisterContext"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.plugin.RegisterContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="plugitin.plugin.RegisterContext.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugitin/plugin.html#RegisterContext.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.plugin.RegisterContext.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="plugitin-pyfs-module">
+<h2>plugitin.pyfs module<a class="headerlink" href="#plugitin-pyfs-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-plugitin.spec">
+<span id="plugitin-spec-module"></span><h2>plugitin.spec module<a class="headerlink" href="#module-plugitin.spec" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugitin.spec.PluginSpec">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugitin.spec.</span></code><code class="sig-name descname"><span class="pre">PluginSpec</span></code><a class="reference internal" href="../_modules/plugitin/spec.html#PluginSpec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.spec.PluginSpec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="plugitin.spec.PluginSpec.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugitin/spec.html#PluginSpec.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugitin.spec.PluginSpec.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="plugitin.spec.PluginSpec.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">''</span></em><a class="headerlink" href="#plugitin.spec.PluginSpec.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="plugitin.codegen.html" class="btn btn-neutral float-right" title="plugitin.codegen package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="plugitin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
