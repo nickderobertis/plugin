@@ -1,6 +1,6 @@
 from typing import Tuple, Dict, List
 
-from plugin import PluginSpec, ChainPlugin, AggregatePlugin
+from plugitin import PluginSpec, ChainPlugin, AggregatePlugin
 
 
 class MyPluginSpec(PluginSpec):

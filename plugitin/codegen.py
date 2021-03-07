@@ -152,7 +152,7 @@ def main(file: str, output_file: Optional[str] = None):
     spec_defs = get_plugin_spec_asts_from_module_ast(tree)
     import_defs = [
         "from typing import *",
-        "from plugin import ChainPlugin, AggregatePlugin",
+        "from plugitin import ChainPlugin, AggregatePlugin",
     ]
     import_def = "\n".join(import_defs)
     chain_defs = [plugin_spec_ast_to_chain_definition(spec) for spec in spec_defs]

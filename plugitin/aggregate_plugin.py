@@ -1,6 +1,6 @@
 from typing import Tuple, Any, Dict, Optional
 
-from plugin import Plugin
+from plugitin import Plugin
 
 
 class AggregatePlugin(Plugin):

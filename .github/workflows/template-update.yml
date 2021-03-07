@@ -49,7 +49,7 @@ jobs:
       uses: nickderobertis/check-if-issue-exists-action@master
       id: check_if_issue_exists
       with: 
-        repo: nickderobertis/plugin 
+        repo: nickderobertis/plugitin
         token: ${{ secrets.gh_token }}
         title: Manual Update to Files from Cookiecutter Needed
         labels: automated issue, maintenance

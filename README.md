@@ -1,7 +1,7 @@
 
-[![](https://codecov.io/gh/nickderobertis/plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/nickderobertis/plugin)
+[![](https://codecov.io/gh/nickderobertis/plugitin/branch/master/graph/badge.svg)](https://codecov.io/gh/nickderobertis/plugitin)
 
-#  plugin
+#  plugitin
 
 ## Overview
 
@@ -9,25 +9,25 @@ A flexible Python plugin framework supporting plugins in multiple languages
 
 ## Getting Started
 
-Install `plugin`:
+Install `plugitin`:
 
 ```
-pip install plugin
+pip install plugitin
 ```
 
 A simple example:
 
 ```python
-import plugin
+import plugitin
 
-# Do something with plugin
+# Do something with plugitin
 ```
 
 ## Links
 
 See the
 [documentation here.](
-https://nickderobertis.github.io/plugin/
+https://nickderobertis.github.io/plugitin/
 )
 
 ## Author

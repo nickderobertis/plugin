@@ -1,4 +1,4 @@
-from plugin.codegen import main
+from plugitin.codegen import main
 from tests.config import PROJECT_1_SPEC_FILE, PROJECT_1_GENERATED_PLUGINS_FILE
 
 GENERATE: bool = False

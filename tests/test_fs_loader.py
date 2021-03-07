@@ -1,8 +1,8 @@
 from typing import Dict
 from unittest.mock import patch
 
-from plugin import FilePluginLoader
-from plugin.finder.fs import FilePluginMeta
+from plugitin import FilePluginLoader
+from plugitin.finder.fs import FilePluginMeta
 from tests import config as conf
 from tests.input_files.project_1.spec import MyChainPlugin, MyAggregatePlugin
 
@@ -26,7 +26,7 @@ class FileLoaderTest:
             assert plug.on_two_args(5, 10) == (25, 30)
 
         expect_nothing = self.meta_dict["on_nothing"]
-        with patch("plugin.loader.fs.run_file") as mock:
+        with patch("plugitin.loader.fs.run_file") as mock:
             plugin = self.loader.load(expect_nothing)
             with plugin_class.register(plugin):
                 plug.on_nothing()
@@ -59,7 +59,7 @@ class FileLoaderTest:
             assert plug.on_two_args(5, 10) == [(25, 30)]
 
         expect_nothing = self.meta_dict["on_nothing"]
-        with patch("plugin.loader.fs.run_file") as mock:
+        with patch("plugitin.loader.fs.run_file") as mock:
             plugin = self.loader.load(expect_nothing)
             with plugin_class.register(plugin):
                 plug.on_nothing()

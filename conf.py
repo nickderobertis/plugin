@@ -2,13 +2,13 @@
 # Sphinx configuration is in the docsrc folder
 
 # Main package name
-PACKAGE_NAME = "plugin"
+PACKAGE_NAME = "plugitin"
 
 # Directory name of package
-PACKAGE_DIRECTORY = "plugin"
+PACKAGE_DIRECTORY = "plugitin"
 
 # Name of Repo
-REPO_NAME = "plugin"
+REPO_NAME = "plugitin"
 
 # Github username of the user which owns the repo
 REPO_USERNAME = "nickderobertis"
@@ -98,7 +98,7 @@ DOCS_OTHER_MOCK_IMPORTS = [
 
 # Add any Python scripts which should be exposed to the command line in the format:
 # CONSOLE_SCRIPTS = ['funniest-joke=funniest.command_line:main']
-CONSOLE_SCRIPTS = ['spec2plug=plugin.codegen:main'],
+CONSOLE_SCRIPTS = ['spec2plug=plugitin.codegen:main'],
 
 # Add any arbitrary scripts to be exposed to the command line in the format:
 # SCRIPTS = ['bin/funniest-joke']

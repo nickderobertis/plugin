@@ -3,10 +3,10 @@
     "commit": "604aa66b42474363bdb3e57f5c80d7195a7297c9",
     "context": {
         "cookiecutter": {
-            "package_name": "plugin",
-            "package_directory": "plugin",
+            "package_name": "plugitin",
+            "package_directory": "plugitin",
             "full_name": "Python Plugin System",
-            "repo_name": "plugin",
+            "repo_name": "plugitin",
             "repo_username": "nickderobertis",
             "short_description": "A flexible Python plugin framework supporting plugins in multiple languages",
             "package_author": "Nick DeRobertis",
