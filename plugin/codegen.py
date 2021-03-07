@@ -1,32 +1,10 @@
 from copy import deepcopy
 from pathlib import Path
-from types import ModuleType
-from typing import Optional, List, Type, Any
-import importlib.util
-import inspect
+from typing import Optional, List, Any
 import astor
 import ast
 
 import black
-
-from plugin import PluginSpec
-
-
-def get_module_from_file(path: Path) -> ModuleType:
-    spec = importlib.util.spec_from_file_location("temp_module", path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod
-
-
-def get_plugin_specs_from_module(mod: ModuleType) -> List[Type[PluginSpec]]:
-    specs: List[Type[PluginSpec]] = []
-    for val in mod.__dict__.values():
-        if not inspect.isclass(val):
-            continue
-        if issubclass(val, PluginSpec) and not val == PluginSpec:
-            specs.append(val)
-    return specs
 
 
 def get_ast_from_file(path: Path) -> ast.Module:
@@ -40,7 +18,7 @@ class PluginSpecAstExtractor(ast.NodeVisitor):
     def visit_ClassDef(self, node: ast.ClassDef) -> Any:
         for base in node.bases:
             # TODO: make codegen work if PluginSpec is renamed on import
-            if base.id == "PluginSpec":
+            if base.id == "PluginSpec":  # type: ignore
                 self.class_defs.append(node)
                 break
         self.generic_visit(node)
@@ -74,7 +52,7 @@ def _ast_method_args_to_call_args(args: ast.arguments) -> ast.arguments:
     # getting (a, b=10). Need to get to (a, b=b)
     for i, default in enumerate(reversed(args.defaults)):
         matched_arg = args.args[-(i + 1)]
-        default.value = matched_arg.arg
+        default.value = matched_arg.arg  # type: ignore
     # Now have (a, b="b"), will need to remove quotes after converting to string
     return args
 
@@ -92,9 +70,9 @@ class PluginTransformer:
         new_node.name = new_name
         new_bases = []
         for base in node.bases:
-            if base.id == "PluginSpec":
+            if base.id == "PluginSpec":  # type: ignore
                 new_base = deepcopy(base)
-                new_base.id = plugin_name
+                new_base.id = plugin_name  # type: ignore
                 new_bases.append(new_base)
             else:
                 new_bases.append(base)
@@ -183,8 +161,7 @@ def main(file: str, output_file: Optional[str] = None):
     full_str = "\n\n".join(all_defs)
     pretty = pretty_format_str(full_str)
     if output_file is not None:
-        output_file = Path(output_file)
-        output_file.write_text(pretty)
+        Path(output_file).write_text(pretty)
     else:
         print(pretty)
 
