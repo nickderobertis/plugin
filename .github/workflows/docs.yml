@@ -36,6 +36,8 @@ jobs:
     - name: Install dependencies
       run: |
         pipenv sync
+        curl -sL https://deb.nodesource.com/setup_14.x | bash -
+        apt-get install -y nodejs
     - name: Lint with flake8
       run: |
         pip install flake8
