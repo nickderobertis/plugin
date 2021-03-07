@@ -1,0 +1,67 @@
+plugin package
+==============
+
+.. automodule:: plugin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+   plugin.finder
+   plugin.loader
+
+Submodules
+----------
+
+plugin.aggregate\_plugin module
+-------------------------------
+
+.. automodule:: plugin.aggregate_plugin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugin.chain\_plugin module
+---------------------------
+
+.. automodule:: plugin.chain_plugin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugin.codegen module
+---------------------
+
+.. automodule:: plugin.codegen
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugin.plugin module
+--------------------
+
+.. automodule:: plugin.plugin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugin.pyfs module
+------------------
+
+.. automodule:: plugin.pyfs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugin.spec module
+------------------
+
+.. automodule:: plugin.spec
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

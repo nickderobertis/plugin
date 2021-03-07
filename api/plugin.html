@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>plugin package &mdash; plugin 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-rendered-html.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="plugin.finder package" href="plugin.finder.html" />
+    <link rel="prev" title="plugin" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> plugin
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Getting started with plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">This is my gallery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">plugin</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">plugin package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="plugin.finder.html">plugin.finder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugin.loader.html">plugin.loader package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugin.aggregate_plugin">plugin.aggregate_plugin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugin.chain_plugin">plugin.chain_plugin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugin.codegen">plugin.codegen module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugin.plugin">plugin.plugin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugin.pyfs">plugin.pyfs module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-plugin.spec">plugin.spec module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">plugin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">plugin</a> &raquo;</li>
+        
+      <li>plugin package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/plugin.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-plugin">
+<span id="plugin-package"></span><h1>plugin package<a class="headerlink" href="#module-plugin" title="Permalink to this headline">¶</a></h1>
+<p>A flexible Python plugin framework supporting plugins in multiple languages</p>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plugin.finder.html">plugin.finder package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugin.finder.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.finder.html#module-plugin.finder.base">plugin.finder.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.finder.html#module-plugin.finder.fs">plugin.finder.fs module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugin.loader.html">plugin.loader package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugin.loader.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.loader.html#module-plugin.loader.base">plugin.loader.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin.loader.html#module-plugin.loader.fs">plugin.loader.fs module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-plugin.aggregate_plugin">
+<span id="plugin-aggregate-plugin-module"></span><h2>plugin.aggregate_plugin module<a class="headerlink" href="#module-plugin.aggregate_plugin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugin.aggregate_plugin.AggregatePlugin">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.aggregate_plugin.</span></code><code class="sig-name descname"><span class="pre">AggregatePlugin</span></code><a class="reference internal" href="../_modules/plugin/aggregate_plugin.html#AggregatePlugin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.aggregate_plugin.AggregatePlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#plugin.plugin.Plugin" title="plugin.plugin.Plugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">plugin.plugin.Plugin</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.aggregate_plugin.AggregatePlugin.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/aggregate_plugin.html#AggregatePlugin.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.aggregate_plugin.AggregatePlugin.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-plugin.chain_plugin">
+<span id="plugin-chain-plugin-module"></span><h2>plugin.chain_plugin module<a class="headerlink" href="#module-plugin.chain_plugin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugin.chain_plugin.ChainPlugin">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.chain_plugin.</span></code><code class="sig-name descname"><span class="pre">ChainPlugin</span></code><a class="reference internal" href="../_modules/plugin/chain_plugin.html#ChainPlugin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.chain_plugin.ChainPlugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#plugin.plugin.Plugin" title="plugin.plugin.Plugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">plugin.plugin.Plugin</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.chain_plugin.ChainPlugin.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/chain_plugin.html#ChainPlugin.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.chain_plugin.ChainPlugin.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-plugin.codegen">
+<span id="plugin-codegen-module"></span><h2>plugin.codegen module<a class="headerlink" href="#module-plugin.codegen" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugin.codegen.AggregatePluginTransformer">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">AggregatePluginTransformer</span></code><a class="reference internal" href="../_modules/plugin/codegen.html#AggregatePluginTransformer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.AggregatePluginTransformer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/ast.html#ast.NodeTransformer" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.NodeTransformer</span></code></a>, <a class="reference internal" href="#plugin.codegen.PluginTransformer" title="plugin.codegen.PluginTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">plugin.codegen.PluginTransformer</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.codegen.AggregatePluginTransformer.transform_method">
+<code class="sig-name descname"><span class="pre">transform_method</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_def</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#AggregatePluginTransformer.transform_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.AggregatePluginTransformer.transform_method" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionDef</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="plugin.codegen.AggregatePluginTransformer.visit_ClassDef">
+<code class="sig-name descname"><span class="pre">visit_ClassDef</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#AggregatePluginTransformer.visit_ClassDef"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.AggregatePluginTransformer.visit_ClassDef" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="plugin.codegen.ChainPluginTransformer">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">ChainPluginTransformer</span></code><a class="reference internal" href="../_modules/plugin/codegen.html#ChainPluginTransformer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.ChainPluginTransformer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/ast.html#ast.NodeTransformer" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.NodeTransformer</span></code></a>, <a class="reference internal" href="#plugin.codegen.PluginTransformer" title="plugin.codegen.PluginTransformer"><code class="xref py py-class docutils literal notranslate"><span class="pre">plugin.codegen.PluginTransformer</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.codegen.ChainPluginTransformer.visit_ClassDef">
+<code class="sig-name descname"><span class="pre">visit_ClassDef</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#ChainPluginTransformer.visit_ClassDef"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.ChainPluginTransformer.visit_ClassDef" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="plugin.codegen.PluginSpecAstExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">PluginSpecAstExtractor</span></code><a class="reference internal" href="../_modules/plugin/codegen.html#PluginSpecAstExtractor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.PluginSpecAstExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/ast.html#ast.NodeVisitor" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.NodeVisitor</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.codegen.PluginSpecAstExtractor.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#PluginSpecAstExtractor.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.PluginSpecAstExtractor.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="plugin.codegen.PluginSpecAstExtractor.visit_ClassDef">
+<code class="sig-name descname"><span class="pre">visit_ClassDef</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#PluginSpecAstExtractor.visit_ClassDef"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.PluginSpecAstExtractor.visit_ClassDef" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="plugin.codegen.PluginTransformer">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">PluginTransformer</span></code><a class="reference internal" href="../_modules/plugin/codegen.html#PluginTransformer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.PluginTransformer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.codegen.PluginTransformer.transform_class_def">
+<code class="sig-name descname"><span class="pre">transform_class_def</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Chain'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plugin_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ChainPlugin'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#PluginTransformer.transform_class_def"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.PluginTransformer.transform_class_def" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ClassDef</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="plugin.codegen.PluginTransformer.transform_method">
+<code class="sig-name descname"><span class="pre">transform_method</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_def</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#PluginTransformer.transform_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.PluginTransformer.transform_method" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionDef</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="plugin.codegen.get_ast_from_file">
+<code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">get_ast_from_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#get_ast_from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.get_ast_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="plugin.codegen.get_plugin_spec_asts_from_module_ast">
+<code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">get_plugin_spec_asts_from_module_ast</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#get_plugin_spec_asts_from_module_ast"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.get_plugin_spec_asts_from_module_ast" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ClassDef</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="plugin.codegen.main">
+<code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="plugin.codegen.plugin_spec_ast_to_aggregate_definition">
+<code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">plugin_spec_ast_to_aggregate_definition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#plugin_spec_ast_to_aggregate_definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.plugin_spec_ast_to_aggregate_definition" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="plugin.codegen.plugin_spec_ast_to_chain_definition">
+<code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">plugin_spec_ast_to_chain_definition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#plugin_spec_ast_to_chain_definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.plugin_spec_ast_to_chain_definition" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="plugin.codegen.pretty_format_str">
+<code class="sig-prename descclassname"><span class="pre">plugin.codegen.</span></code><code class="sig-name descname"><span class="pre">pretty_format_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/codegen.html#pretty_format_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.codegen.pretty_format_str" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-plugin.plugin">
+<span id="plugin-plugin-module"></span><h2>plugin.plugin module<a class="headerlink" href="#module-plugin.plugin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugin.plugin.Plugin">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.plugin.</span></code><code class="sig-name descname"><span class="pre">Plugin</span></code><a class="reference internal" href="../_modules/plugin/plugin.html#Plugin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.plugin.Plugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.plugin.Plugin.deregister">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">deregister</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/plugin.html#Plugin.deregister"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.plugin.Plugin.deregister" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="plugin.plugin.Plugin.execute">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/plugin.html#Plugin.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.plugin.Plugin.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="plugin.plugin.Plugin.handlers">
+<code class="sig-name descname"><span class="pre">handlers</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#plugin.spec.PluginSpec" title="plugin.spec.PluginSpec"><span class="pre">plugin.spec.PluginSpec</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#plugin.plugin.Plugin.handlers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="plugin.plugin.Plugin.register">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">register</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/plugin.html#Plugin.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.plugin.Plugin.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a virtual subclass of an ABC.</p>
+<p>Returns the subclass, to allow usage as a class decorator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#plugin.plugin.RegisterContext" title="plugin.plugin.RegisterContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">RegisterContext</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="plugin.plugin.RegisterContext">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.plugin.</span></code><code class="sig-name descname"><span class="pre">RegisterContext</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/plugin.html#RegisterContext"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.plugin.RegisterContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.plugin.RegisterContext.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plugin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/plugin.html#RegisterContext.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.plugin.RegisterContext.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-plugin.pyfs">
+<span id="plugin-pyfs-module"></span><h2>plugin.pyfs module<a class="headerlink" href="#module-plugin.pyfs" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="plugin.pyfs.load_args_kwargs">
+<code class="sig-prename descclassname"><span class="pre">plugin.pyfs.</span></code><code class="sig-name descname"><span class="pre">load_args_kwargs</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/pyfs.html#load_args_kwargs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.pyfs.load_args_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>, …], <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="plugin.pyfs.output_args_kwargs">
+<code class="sig-prename descclassname"><span class="pre">plugin.pyfs.</span></code><code class="sig-name descname"><span class="pre">output_args_kwargs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/pyfs.html#output_args_kwargs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.pyfs.output_args_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-plugin.spec">
+<span id="plugin-spec-module"></span><h2>plugin.spec module<a class="headerlink" href="#module-plugin.spec" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="plugin.spec.PluginSpec">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">plugin.spec.</span></code><code class="sig-name descname"><span class="pre">PluginSpec</span></code><a class="reference internal" href="../_modules/plugin/spec.html#PluginSpec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.spec.PluginSpec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="plugin.spec.PluginSpec.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/plugin/spec.html#PluginSpec.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#plugin.spec.PluginSpec.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="plugin.spec.PluginSpec.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">''</span></em><a class="headerlink" href="#plugin.spec.PluginSpec.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="plugin.finder.html" class="btn btn-neutral float-right" title="plugin.finder package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
