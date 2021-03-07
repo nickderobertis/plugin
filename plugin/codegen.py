@@ -7,6 +7,8 @@ import inspect
 import astor
 import ast
 
+import black
+
 from plugin import PluginSpec
 
 
@@ -50,7 +52,7 @@ def get_plugin_spec_asts_from_module_ast(tree: ast.Module) -> List[ast.ClassDef]
     return extractor.class_defs
 
 
-def _ast_method_args_to_call_args(args: ast.arguments) -> str:
+def _ast_method_args_to_call_args(args: ast.arguments) -> ast.arguments:
     args = deepcopy(args)
     del args.args[0]  # delete self argument
     arg_attrs = (
@@ -68,6 +70,12 @@ def _ast_method_args_to_call_args(args: ast.arguments) -> str:
             continue
         for arg in arg_list:
             arg.annotation = None
+    # Up to here, for call signature (a: int, b: int = 10) will be
+    # getting (a, b=10). Need to get to (a, b=b)
+    for i, default in enumerate(reversed(args.defaults)):
+        matched_arg = args.args[-(i + 1)]
+        default.value = matched_arg.arg
+    # Now have (a, b="b"), will need to remove quotes after converting to string
     return args
 
 
@@ -106,9 +114,11 @@ class PluginTransformer:
 
     def transform_method(self, func_def: ast.FunctionDef) -> ast.FunctionDef:
         execute_args = _ast_method_args_to_call_args(func_def.args)
-        body_str = (
-            f'return self.execute("{func_def.name}", {astor.to_source(execute_args)})'
+        # Coming as (a, b="b"), replace quotes to get (a, b=b)
+        execute_args_str = (
+            astor.to_source(execute_args).replace('"', "").replace("'", "")
         )
+        body_str = f'return self.execute("{func_def.name}", {execute_args_str})'
         ast_return = ast.parse(body_str).body
         func_def.body = ast_return
         return func_def
@@ -152,19 +162,33 @@ def plugin_spec_ast_to_aggregate_definition(tree: ast.ClassDef) -> str:
     return astor.to_source(tree)
 
 
+def pretty_format_str(string: str) -> str:
+    fm = black.FileMode()
+    out_str = black.format_str(string, mode=fm)
+    return out_str
+
+
 def main(file: str, output_file: Optional[str] = None):
     path = Path(file)
     tree = get_ast_from_file(path)
     spec_defs = get_plugin_spec_asts_from_module_ast(tree)
+    import_defs = [
+        "from typing import *",
+        "from plugin import ChainPlugin, AggregatePlugin",
+    ]
+    import_def = "\n".join(import_defs)
     chain_defs = [plugin_spec_ast_to_chain_definition(spec) for spec in spec_defs]
     agg_defs = [plugin_spec_ast_to_aggregate_definition(spec) for spec in spec_defs]
-    all_defs = [*chain_defs, *agg_defs]
+    all_defs = [import_def, *chain_defs, *agg_defs]
     full_str = "\n\n".join(all_defs)
+    pretty = pretty_format_str(full_str)
     if output_file is not None:
         output_file = Path(output_file)
-        output_file.write_text(full_str)
+        output_file.write_text(pretty)
     else:
-        print(full_str)
+        print(pretty)
+
+    return pretty
 
 
 if __name__ == "__main__":
