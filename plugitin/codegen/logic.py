@@ -1,9 +1,9 @@
+import ast
 from copy import deepcopy
 from pathlib import Path
-from typing import Optional, List, Any
-import astor
-import ast
+from typing import List, Any, Optional
 
+import astor
 import black
 
 
@@ -146,7 +146,7 @@ def pretty_format_str(string: str) -> str:
     return out_str
 
 
-def main(file: str, output_file: Optional[str] = None):
+def generate_plugin_code_from_spec_file(file: str, output_file: Optional[str] = None):
     path = Path(file)
     tree = get_ast_from_file(path)
     spec_defs = get_plugin_spec_asts_from_module_ast(tree)
@@ -166,24 +166,3 @@ def main(file: str, output_file: Optional[str] = None):
         print(pretty)
 
     return pretty
-
-
-if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "file",
-        type=str,
-        help="Input file which should contain subclass of PluginSpec",
-    )
-    parser.add_argument(
-        "-o",
-        "--output",
-        required=False,
-        type=str,
-        default=None,
-        help="Output file to write generated Plugin classes to. If not specified, writes to stdout",
-    )
-    args = parser.parse_args()
-    main(args.file, args.output)
