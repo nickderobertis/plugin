@@ -8,4 +8,5 @@ from plugitin.aggregate_plugin import AggregatePlugin
 from plugitin.finder.fs import FileSystemFinder
 from plugitin.loader.fs import FilePluginLoader
 from plugitin.finder.name import PackageNameFinder
+from plugitin.loader.module import PythonModuleLoader
 from plugitin.pyfs import load_args_kwargs, output_args_kwargs

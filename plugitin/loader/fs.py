@@ -3,7 +3,7 @@ from functools import partial
 from pathlib import Path
 import json
 import sys
-from typing import Dict, Callable
+from typing import Dict, Callable, List
 
 from plugitin import PluginSpec
 from plugitin.metas.fs import FilePluginMeta
@@ -61,8 +61,8 @@ class FilePluginLoader(PluginLoader[FilePluginMeta]):
         run_this_file = partial(run_file, executor, meta.file_path)
         return run_this_file
 
-    def load(self, meta: FilePluginMeta) -> PluginSpec:
+    def load(self, meta: FilePluginMeta) -> List[PluginSpec]:
         plug = PluginSpec()
         run_this_file = self._get_run_func(meta)
         setattr(plug, meta.name, run_this_file)
-        return plug
+        return [plug]
