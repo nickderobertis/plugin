@@ -2,7 +2,7 @@ from typing import Dict
 from unittest.mock import patch
 
 from plugitin import FilePluginLoader
-from plugitin.finder.fs import FilePluginMeta
+from plugitin.metas.fs import FilePluginMeta
 from tests import config as conf
 from tests.input_files.project_1.spec import MyChainPlugin, MyAggregatePlugin
 

@@ -1,7 +1,7 @@
 from typing import Generator, TypeVar, Type, List
 from typing_extensions import Protocol
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 class PluginFinder(Protocol[T]):

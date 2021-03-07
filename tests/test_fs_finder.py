@@ -1,7 +1,7 @@
 from typing import Any, List
 
 from plugitin import FileSystemFinder
-from plugitin.finder.fs import FilePluginMeta
+from plugitin.metas.fs import FilePluginMeta
 from tests import config as conf
 from tests.input_files.project_1.spec import MyPluginSpec
 

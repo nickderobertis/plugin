@@ -6,7 +6,7 @@ import sys
 from typing import Dict, Callable
 
 from plugitin import PluginSpec
-from plugitin.finder.fs import FilePluginMeta
+from plugitin.metas.fs import FilePluginMeta
 from plugitin.loader.base import PluginLoader
 
 FILE_EXECUTORS: Dict[str, str] = {

@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import List, Dict
 
-from plugitin.finder.fs import FilePluginMeta
+from plugitin.metas.fs import FilePluginMeta
 
 TESTS_PATH = Path(__file__).parent
 INPUT_FILES_PATH = TESTS_PATH / 'input_files'
