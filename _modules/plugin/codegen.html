@@ -183,7 +183,7 @@
 
 <div class="viewcode-block" id="PluginSpecAstExtractor.visit_ClassDef"><a class="viewcode-back" href="../../api/plugin.html#plugin.codegen.PluginSpecAstExtractor.visit_ClassDef">[docs]</a>    <span class="k">def</span> <span class="nf">visit_ClassDef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">ClassDef</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">bases</span><span class="p">:</span>
-            <span class="c1"># TODO: make codegen work if PluginSpec is renamed on import</span>
+            <span class="c1"># TODO [#1]: make codegen work if PluginSpec is renamed on import</span>
             <span class="k">if</span> <span class="n">base</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;PluginSpec&quot;</span><span class="p">:</span>  <span class="c1"># type: ignore</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">class_defs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
                 <span class="k">break</span>
