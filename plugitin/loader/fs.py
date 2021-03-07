@@ -49,7 +49,7 @@ def run_file(executor: str, path: Path, *args, **kwargs):
         return args, kwargs
 
 
-class FilePluginLoader(PluginLoader):
+class FilePluginLoader(PluginLoader[FilePluginMeta]):
     metadata_class = FilePluginMeta
     file_executors: Dict[str, str] = FILE_EXECUTORS
 

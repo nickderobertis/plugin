@@ -39,7 +39,7 @@ class FilePluginMeta:
         return all([ext in exts for ext in self.extensions])
 
 
-class FileSystemFinder(PluginFinder):
+class FileSystemFinder(PluginFinder[FilePluginMeta]):
     metadata_class = FilePluginMeta
 
     def __init__(
